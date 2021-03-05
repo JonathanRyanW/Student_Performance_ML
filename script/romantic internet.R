@@ -4,6 +4,11 @@ data <- read.csv("./data/student-mat.csv", sep = ";")
 library(ggplot2)
 library(dplyr)
 
+table(data$internet)
+
+"First of all, most students (329 out of 395 = 83.2%) does have an internet
+connection"
+
 "Creating a bar plot of romantic relationships by internet connection"
 
 ggplot(data, aes(romantic)) +
@@ -25,7 +30,7 @@ romantic_internet <- data.frame(Internet = c("No", "Yes", "No", "Yes"),
 
 Probability <- c(prob.no.internet[1], prob.internet[1], prob.no.internet[2], prob.internet[2])
 romantic_internet <- cbind(romantic_internet, Probability)
-rm(temp, prob.internet, prob.no.internet, prob, Probability)
+rm(temp, prob.internet, prob.no.internet, Probability)
 
 "We get our data frame romantic_internet. It is already tidy. There is no need
 to use the tidyr package. From this data frame we can clearly see evidence
