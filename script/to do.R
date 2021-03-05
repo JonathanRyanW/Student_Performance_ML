@@ -1,10 +1,11 @@
 "To do list:
 1. Cek jurnal ilmiah tentang pengaruh parental status terhadap kemungkinan
 seseorang berada pada hubungan romantis (pacaran)
-2. 
+2. Analisa hub romantic dan famrel
+3. Visualisasikan data probability romantic by age dengan benar
 
 Questions:
-1. Visualisasikan data probability romantic by age
+1. 
 2. Apakah perempuan atau laki2 yang memiliki nilai lebih tinggi? Bandingin
 G1, G2, G3
 3. Apakah kita bisa memprediksi g3 hanya melalui g1 dan g2? Jadi tidak usah
@@ -13,3 +14,4 @@ pake var2 lainnya
 var internet
 6. Apakah internet mempengaruhi kemungkinan seorang anak untuk punya pacar?
 7. Apakah lama waktu belajar seorang murid mempengaruhi nilainya?
+8. Is there a variable that shows family income?
