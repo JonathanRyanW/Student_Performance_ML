@@ -37,7 +37,13 @@ ggplot(res, aes(x = res)) +
 predictions <- predict(model.G1.G2, test_data)
 result <- cbind(test_data$G3, predictions)
 result <- as.data.frame(result)
+
 mse <- mean((result$V1 - result$predictions)^2)
+SSE <- sum((result$V1 - result$predictions)^2)
+SST <- sum((mean(data_clean$G3) - result$predictions)^2)
+R2 <- 1 - SSE/SST
+
+"Very high R2 of 0.92"
 
 "Next we will try to predict G3 using a linear regression model with every
 variable that we have as the input"
@@ -64,7 +70,3 @@ gives out other in their mother's job"
 "Adjusted R-squared of this model is 0.935. Which is slightly higher than the
 previous model Adjusted R-squared:  0.9347. It's not even worth it to use all
 the variables just to get that little to no boost of fitness."
-
-"My question is, can we decide on which model to use based on these residuals
-only? The residuals vary greatly so i think it might be possible.
-"
