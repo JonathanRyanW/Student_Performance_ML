@@ -3,7 +3,6 @@ data <- read.csv("./data/student-mat.csv", sep = ";")
 
 library(dplyr)
 library(ggplot2)
-library(ggthemes)
 library(caTools)
 
 "We will predict G3 using a linear regression model with G1 and G2 as inputs."
@@ -32,6 +31,9 @@ res <- residuals(model.G1.G2)
 res <- as.data.frame(res)
 ggplot(res, aes(x = res)) +
   geom_histogram(binwidth = 0.1)
+
+"The residuals looks like it is normally distributed. A good sign that indicates
+the validity of our model."
 
 #Predicting G3 of the test data
 predictions <- predict(model.G1.G2, test_data)
@@ -70,3 +72,4 @@ gives out other in their mother's job"
 "Adjusted R-squared of this model is 0.935. Which is slightly higher than the
 previous model Adjusted R-squared:  0.9347. It's not even worth it to use all
 the variables just to get that little to no boost of fitness."
+
